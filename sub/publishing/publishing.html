@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="웹퍼블리셔 포트폴리오, 웹퍼블리셔 강의, 웹디자인 포트폴리오, 웹디자이너 포트폴리오 2024 강의">
+    <meta name="Author" content="하수정">
+    <meta name="Keywords" content="웹퍼블리셔,웹퍼블리셔 포트폴리오,웹퍼블리셔 과외,웹퍼블리셔 국비,웹퍼블리셔 포트폴리오 2024">
+
+    <title>퍼블리싱</title>
+
+    <link rel="stylesheet" href="../../css/common.css">
+    <!-- <link href="css/list.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="css/publishing.css">
+    <!-- <link rel="stylesheet" href="css/publishing.scss"> -->
+
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <!-- <SCript src="../../js/common.js"></SCript> -->
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="list_mouse"></div>
+    <div id="wrap">
+        <header id="header" class="header">
+            <div class="inner">
+                <h1 class="header__logo">
+                    <a href="#" onclick="return false">
+                        <!-- <span>JD</span> -->
+                        <!-- <img src="img/flower_pink.png" alt=""> -->
+                        <!-- <img src="img/제이-륀.svg" alt=""> -->
+                        <!-- <img src="img/logo_vol6.svg" alt=""> -->
+                        <img src="../../img/logo_vol7.svg" alt="제이륀">
+                    </a>
+
+                </h1><!-- header__logo end -->
+
+                <nav class="nav_wrap">
+                    <ul class="gnb" id="gnb">
+                        <li><a href="#main_data">수업내용</a></li>
+                        <li><a href="#jd_protfolio">포트폴리오</a></li>
+                        <li><a href="#motion">모션 효과</a></li>
+                        <li><a href="#reference">북마크/오픈소스</a></li>
+                        <li><a href="#question">자주묻는질문</a></li>
+                    </ul><!-- .gnb end -->
+                </nav><!-- .nav_wrap end -->
+            </div><!-- .inner end -->
+
+
+
+            <div class="nav_all none">
+
+            </div><!-- .nav_all end -->
+
+        </header><!-- #header -->
+
+        <main id="sub">
+            <article class="sub_visual">
+
+            </article><!-- .sub_visual end -->
+            <div class="sub_inner work">
+                <div class="sub_title">
+                    <h3>publishing</h3>
+                    <p>publishing</p>
+                </div><!-- .sub_title end -->
+
+                <ul class="content_menu">
+                    <li><a href="#">전체</a></li>
+                    <li class="on"><a href="#">html/style</a></li>
+                    <li><a href="#">script</a></li>
+                </ul><!-- content_menu -->
+
+                <form action="">
+                    <div class="search_box">
+                        <input type="text" id="search" placeholder="검색어를 입력해주세요" />
+                        <!-- <button>검색</button> -->
+                    </div><!-- .search_box end -->
+                </form>
+
+                <!--  <div class="work__button">
+                    <ul>
+                        <li><a href="#" onclick="return false">커리큘럼</a></li>
+                        <li><a href="https://www.notion.so/html-css-3a85deb5e33241de9a9517c2863ba572?pvs=4" target="_blank">HTML+CSS</a></li>
+                        <li><a href="#">JS</a></li>
+                    </ul>
+                </div> --><!-- .work__button end -->
+
+
+                <article class="work_wrap on"> 
+                    <div class="work_wrap_items">
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>jQuery</span>
+                                </li>
+                                <li class="text"><h4>좌우 자동 슬라이드</h4></li>
+                                <li class="lang">
+                                    <div class="">jquery</div>
+                                    <div class="explain">insertAfter()</div>
+                                    <div class="explain">animate()</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>제이쿼리를 이용하여 애니메이션 효과를 가진 좌우 자동 슬라이드를 구현할 수 있다.</p>
+                                </li>
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>vanilla JS</span>
+                                </li>
+                                <li class="text"><h4>탭메뉴</h4></li>
+                                <li class="lang">
+                                    <div class="">vanilla js</div>
+                                    <div class="explain">forEach()</div>
+                                    <div class="explain">for()</div>
+                                    <div class="explain">classList</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>바닐라 자바스크립트를 이용하여 메뉴 클릭 시 해당 메뉴의 컨텐츠 정보가 누출되도록 탭메뉴를 구현할 수 있다.</p>
+                                </li>
+
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codepen.io/hwebdew/pen/KKYWoRp"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>jQuery</span>
+                                </li>
+                                <li class="text"><h4>탭메뉴</h4></li>
+                                <li class="lang">
+                                    <div class="">jquery</div>
+                                    <div class="explain">forEach()</div>
+                                    <div class="explain">for()</div>
+                                    <div class="explain">classList</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>제이쿼리를 이용하여 메뉴 클릭 시 해당 메뉴의 컨텐츠 정보가 누출되도록 탭메뉴를 구현할 수 있다.</p>
+                                </li>
+
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codepen.io/hwebdew/pen/poBeLdJ"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- item -->
+
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>vanilla JS / jQuery</span>
+                                </li>
+                                <li class="text"><h4>클래스명 제어</h4></li>
+                                <li class="lang">
+                                    <div class="">vanilla js/jquery</div>
+                                    <div class="explain">classList</div>
+                                    <div class="explain">addClass</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>클래스명 추가/삭제 등 클래스명을 제어할 수 있으며, 바닐라자바스크립트와 제이쿼리로 파악할 수 있다.</p>
+                                </li>
+
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>style</span>
+                                </li>
+                                <li class="text"><h4>텍스트 애니메이션</h4></li>
+                                <li class="lang">
+                                    <div class="">css</div>
+                                    <div class="explain">@keyframe</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>스타일 애니메이션을 이용하여 흘러가는 텍스트를 표현할 수 있다.</p>
+                                </li>
+
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="#"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codepen.io/hwebdew/pen/oNOZEBj" target="_blank" title="codepen 이동">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                             
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>style</span>
+                                </li>
+                                <li class="text"><h4>이미지 애니메이션</h4></li>
+                                <li class="lang">
+                                    <div class="">css</div>
+                                    <div class="explain">@keyframe</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>스타일 애니메이션을 이용하여 흘러가는 목업안에 있는 이미지가 움직이도록 설정할 수 있다.</p>
+                                </li>
+
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>script</span>
+                                </li>
+                                <li class="text"><h4>스크롤 시 X축 이동</h4></li>
+                                <li class="lang">
+                                    <div class="">script</div>
+                                    <div class="explain">scrollTop</div>
+                                    <div class="explain">offset().left</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>스크롤 시 콘텐츠가 가로로 (x축) 이동 되도록 구현할 수 있다.</p>
+                                </li>
+
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>script</span>
+                                </li>
+                                <li class="text"><h4>스크롤 시 콘텐츠 변화</h4></li>
+                                <li class="lang">
+                                    <div class="">vanilla js</div>
+                                    <div class="explain">scrollY</div>
+                                    <div class="explain">offset.top</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>[바닐라자바스크립트] 스크롤 시 해당 요소에게 클래스명으로 제어하여 동적인 효과 적용</p>
+                                </li>
+
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codepen.io/hwebdew/pen/JjVWpZG" target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- item -->
+
+                        <div class="item">
+                            <ul class="item_info">
+                                <li class="num">
+                                    <span>00</span>
+                                    <span>script</span>
+                                </li>
+                                <li class="text"><h4>마우스 올렸을 때 img값 변경</h4></li>
+                                <li class="lang">
+                                    <div class="">vanilla js</div>
+                                    <div class="explain">scrollY</div>
+                                    <div class="explain">offset.top</div>
+                                </li><!-- .lang end -->
+
+                                <li class="data">
+                                    <p>[바닐라자바스크립트] 썸네일에 마우스 올렸을 때 해당 img값으로 다른 요소에 적용</p>
+                                </li>
+
+                            </ul>
+                            <ul class="item-btn">
+                                <li class="explain">
+                                    <a href="https://codesandbox.io/s/jwaujadongseulraideu-d5v2pt?file=/index.html:1988-1995"
+                                        target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>explain</span>
+                                    </a>
+                                </li>
+                                <li class="view">
+                                    <a href="https://codepen.io/hwebdew/pen/JjVWpZG" target="_blank">
+                                        <!-- <img src="../../../img/code_icon_black.png" alt=""> -->
+                                        <span>view</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- item -->
+
+
+                    </div><!-- itemWrap end -->
+
+                </article>
+
+
+
+
+            </div><!-- inner end -->
+           <!--  <div class="popup" id="numList">
+                <img src="sub/vol14.jpg" alt="" />
+            </div> --><!-- .classList end -->
+
+
+           
+            
+        </main><!-- sub -->
+
+        <footer id="footer" class="footer">
+            <ul>
+                <li>
+                    <a href="tel:010-8563-7815">
+                        <img src="../../img/icon_tel.png" alt="전화번호">
+                        <span>010-8563-7815</span>
+                    </a>
+
+                </li>
+
+                <li>
+                    <img src="../../img/kakaotalk.png" alt="카카오톡ID">
+
+                    <span id="copy">shines2268<img src="../../img/icon_copy.png" alt="복사하기" class="copy"
+                            title="복사하기"></span>
+                </li>
+                <!-- <li>
+                    <a href="https://github.com/jwebdew" target="_blank">
+                        <img src="img/icon_github.png" alt="깃허브">
+                        <span>깃허브</span>
+                    </a>
+                </li> -->
+            </ul>
+            <img src="../../img/kakao_myQR.png" alt="">
+            <!-- <p>©HA:D 하수정 2024.All Rights Reserved.</p> -->
+            <p>©Jay-Lune(제이엘) 2024.All Rights Reserved.</p>
+        </footer>
+
+
+
+    </div><!-- wrap end -->
+
+
+
+    <script>
+
+    </script>
+
+
+
+</body>
+
+</html>

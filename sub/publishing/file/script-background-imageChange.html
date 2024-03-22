@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지 변경</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            line-height: 1;
+            color: #333;
+        }
+        .main_visual {
+            height: 100vh;
+        }
+        .main_visual a {
+            display: block;
+            height: 100%;
+        }
+        .main_visual a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cont {
+            height: 100vh;
+            background: url('img/diffuser-03.jpg') center center / cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cont .list {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .cont .list .item {
+            border: 1px solid #333;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            let cont = $('.cont');
+            let contItem = $('.cont .item');
+
+
+            /* 링크방지 */
+            $('.cont .item a').click(function(e){
+                e.preventDefault();
+            });
+
+
+            contItem.mouseenter(function () {
+                console.log($(this).attr('data-bg'))
+                //attr => 속성값을 가져오거나 찾고자 할때 사용
+                let thisBg = $(this).attr('data-bg');
+                let thisLink = $(this).find('a').attr('href');
+                //children() => 자식만 선택
+                //find() => 자식, 자손 모두 선택
+                console.log(thisLink)
+
+                cont.css({
+                    'background-image': 'url(' + thisBg + ')'
+                });
+
+                /* main_visual a 링크 변경하기 */
+                // item a의 링크값으로 변경
+                $('.main_visual a').attr('href', thisLink);
+
+                console.log($(this).find('h4').text())
+                //text() => 선택요소의 텍스트값 변경
+
+
+
+            });//contItem.mouseenter()
+
+        });//jquery end
+    </script>
+
+</head>
+
+<body>
+    <section class="main_visual">
+        <a href="#">
+            <img src="img/겨울배경04.jpg" alt="">
+        </a>
+    </section><!-- .main_visual end -->
+    <section class="cont">
+        <h3>배경이미지 변경</h3>
+        <div class="list">
+
+            <!-- data-마음대로 이름 지정 
+                data- => html에 추가 정보가 필요할 때 , 저장하는 것이 목적
+            -->
+            <div class="item" data-bg=" ">
+                <a href="https://www.naver.com">
+                    <h4>title</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero praesentium voluptates,
+                        voluptatibus fugiat, labore veritatis perferendis numquam beatae obcaecati sit, libero sed
+                        reiciendis tempore quibusdam ea vitae corrupti in?</p>
+                </a>
+            </div><!-- .item end -->
+
+            <div class="item" data-bg="img/diffuser-04.jpg">
+                <a href="#">
+                    <h4>title</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero praesentium voluptates,
+                        voluptatibus fugiat, labore veritatis perferendis numquam beatae obcaecati sit, libero sed
+                        reiciendis tempore quibusdam ea vitae corrupti in?</p>
+                </a>
+            </div><!-- .item end -->
+
+            <div class="item" data-bg="img/diffuser-02.jpg">
+                <a href="#">
+                    <h4>title</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vero praesentium voluptates,
+                        voluptatibus fugiat, labore veritatis perferendis numquam beatae obcaecati sit, libero sed
+                        reiciendis tempore quibusdam ea vitae corrupti in?</p>
+                </a>
+            </div><!-- .item end -->
+        </div><!-- .list end -->
+    </section><!-- .cont end -->
+</body>
+
+</html>

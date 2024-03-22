@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 슬라이드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .text_slide {
+            background-color: royalblue;
+            color: white;
+            padding: 20px 0;
+            font-size: 40px;
+            overflow: hidden;
+        }
+        .text_slide p {
+            white-space: nowrap;
+            animation: textSlide 20s infinite linear;
+        }
+        @keyframes textSlide {
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+ 
+        .text_slide_2 {
+            background-color: red;
+            transform: skewY(5deg);
+        }
+        .text_slide_2 p {
+            animation: textSlide2 20s infinite linear;
+        }
+        @keyframes textSlide2 {
+            0% {transform: translateX(-100%);}
+            100% {transform: translateX(0%);}
+        }
+    </style>
+</head>
+<body>
+    <div class="text_slide">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sapiente ratione soluta esse reprehenderit labore quibusdam accusamus asperiores atque dolore? Quisquam commodi praesentium voluptatem, doloribus voluptates totam quas laborum eos?</p>
+    </div><!-- .text_slide end -->
+
+    <div class="text_slide text_slide_2">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sapiente ratione soluta esse reprehenderit labore quibusdam accusamus asperiores atque dolore? Quisquam commodi praesentium voluptatem, doloribus voluptates totam quas laborum eos?</p>
+    </div><!-- .text_slide end -->
+
+     
+</body>
+</html>

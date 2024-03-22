@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤시 콘텐츠 변화</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            height: 100px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+        section {
+            height: 100vh;
+        }
+        .main_visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cont01 {
+            background: url('img/배경.jpg') center center / cover no-repeat; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        .cont01 div {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        .cont01 div.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .cont01 div.on0 {
+            transition: 0.5s;
+        }
+        .cont01 div.on1 {
+            transition: 0.5s 0.5s;
+        }
+        .cont01 div.on2 {
+            transition: 0.5s 1s;
+        }
+        .cont01 div.on3 {
+            opacity: 1;
+            transition: 0.5s 1.5s;
+        }
+
+
+        .cont02 h3 {
+            height: 100%;
+            font-size: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            let cont = document.querySelector('.cont01');
+            let contItem = document.querySelectorAll('.cont01 div');
+            
+            //offsetTop => 브라우저에서 해당요소가 떨어진 Y축 값
+            let contTop = cont.offsetTop;
+            console.log(contTop);
+            window.addEventListener('scroll', () => {
+                let scrollBar = window.scrollY;
+                console.log(scrollBar);
+                if(contTop <= scrollBar) {
+                    contItem.forEach((item, index) => {
+                        item.classList.add('on' + index, 'active');
+                        //let index = [contItem,contItem, contItem, contItem]
+                    });
+                } else if (scrollBar === 0) {
+                    contItem.forEach((item, index) => {
+                        item.classList.remove('on' + index, 'active');
+                        //let index = [contItem,contItem, contItem, contItem]
+                    });
+                }
+            });//scroll
+        };//script end
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>👒</header>
+        <main>
+            <section class="main_visual">
+                <img src="img/겨울배경03.jpg" alt="겨울배경 이미지">
+            </section><!-- .main_visual end -->
+
+            <section class="cont01">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </section><!-- .cont01 end -->
+
+            <section class="cont02">
+                <h3>🌹cont title</h3>
+            </section><!-- .cont02 end -->
+
+        </main>
+
+    </div><!-- #wrap end -->
+</body>
+</html>

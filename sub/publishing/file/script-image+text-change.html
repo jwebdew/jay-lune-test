@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지, 텍스트 변경</title>
+    <style>
+        @font-face {
+            font-family: "Pretendard-Regular";
+            src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            line-height: 1;
+            color: #333;
+            font-family: "Pretendard-Regular";
+        }
+
+        .cont .inner {
+            max-width: 1280px;
+            width: calc(100% - 40px);
+            margin: 150px auto;
+        }
+        .cont .inner .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .cont .inner .title::before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            bottom: 6px;
+        }
+        .cont .inner .title h3 {
+            font-size: 50px;
+        }
+        .cont .inner .list {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .cont .inner .list .big_item {
+            width: 48%;
+            border: 1px solid #333;
+            border-radius: 300px 300px 0 0;
+            overflow: hidden;
+        }
+        .cont .inner .list .big_item figure {
+            height: 500px;
+        }
+        .cont .inner .list .big_item figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cont .inner .list .big_item div {
+            border-top: 1px solid #333;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .cont .inner .list .big_item div h4 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .cont .inner .list .big_item div strong {
+            font-size: 25px;
+        }
+        .cont .inner .list .small_item {
+            width: 48%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .cont .inner .list .small_item .item {
+            width: 48%;
+            border: 1px solid #333;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+        .cont .inner .list .small_item .item figure {
+            height: 200px;
+        }
+        .cont .inner .list .small_item .item figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+         
+        .cont .inner .list .small_item .item div {
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            let bigItemImage = document.querySelector('.big_item img');
+            let bigItemTitle = document.querySelector('.big_item h4')//.big_item h4
+            let bigItemText = document.querySelector('.big_item strong')//.big_item strong 
+
+            let smallItem = document.querySelectorAll('.small_item .item');//.small_item .item            
+            let smallItemImage = document.querySelectorAll('.small_item img');//.small_item img
+            let smallItemTitle = document.querySelectorAll('.small_item h4'); //.small_item h4
+            let smallItemText = document.querySelectorAll('.small_item strong'); //.small_item strong
+            
+            //small_item .item img 초기값
+            smallItemImage.forEach((itemStyle) => {
+                itemStyle.style.opacity = '0.3';
+            });//forEach
+            smallItemImage[0].style.opacity = '1';
+
+            for (let i = 0; i < smallItem.length; i++) {
+                smallItem[i].addEventListener('mouseenter', () => {
+                    bigItemImage.src = smallItemImage[i].src;
+                    bigItemTitle.innerHTML = smallItemTitle[i].innerHTML;
+                    bigItemText.innerHTML = smallItemText[i].innerHTML;
+                    
+                    smallItemImage.forEach((itemStyle) => {
+                        itemStyle.style.opacity = '0.3';
+                    });//forEach
+
+                    smallItemImage[i].style.opacity = '1';
+                });
+            }
+
+        };//script end
+    </script>    
+</head>
+
+<body>
+    <section class="cont">
+        <div class="inner">
+            <div class="title">
+                <h3>Weekly Best</h3>
+                <p>한주간 인기 아이템을 확인하세요.</p>
+            </div><!-- .title end -->
+
+            <div class="list">
+                <div class="big_item">
+                    <figure>
+                        <img src="img/diffuser-01.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h4>디퓨저 1</h4>
+                        <strong>11,000원</strong>
+                    </div>
+                </div><!-- .big_item end -->
+
+                <div class="small_item">
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/diffuser-01.jpg" alt="">
+                            </figure>
+                            <div>
+                                <h4>디퓨저 1</h4>
+                                <strong>11,000원</strong>
+                            </div>
+                        </a>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/diffuser-02.jpg" alt="">
+                            </figure>
+                            <div>
+                                <h4>디퓨저 2</h4>
+                                <strong>22,000원</strong>
+                            </div>
+                        </a>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/diffuser-03.jpg" alt="">
+                            </figure>
+                            <div>
+                                <h4>디퓨저 3</h4>
+                                <strong>33,000원</strong>
+                            </div>
+                        </a>
+                    </div><!-- .item end -->
+
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/diffuser-04.jpg" alt="">
+                            </figure>
+                            <div>
+                                <h4>디퓨저 4</h4>
+                                <strong>44,000원</strong>
+                            </div>
+                        </a>
+                    </div><!-- .item end -->
+
+                </div><!-- .small_item end -->
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont end -->
+</body>
+
+</html>
