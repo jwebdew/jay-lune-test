@@ -39,7 +39,9 @@ html,body {
     /* overflow-x: hidden;  */
     background-color: #fff;
     word-break: keep-all;
-
+    min-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
     
 } 
 

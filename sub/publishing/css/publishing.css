@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("../../sub-common/sub-common.css");
 :root {
-  --subContentWidth: 1440px;
+  --subContentWidth: 1600px;
   --responsiveWidth: calc(100% - 40px);
   --color-black: #000;
   --color-darkgray: #333;

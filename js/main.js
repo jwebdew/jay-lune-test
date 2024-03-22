@@ -77,6 +77,9 @@ $(function () {
 
   const motion = document.querySelector('#motion');
   const motionTop = motion.offsetTop;
+
+  const topBtn = document.querySelector('#top-btn');
+
   window.addEventListener('scroll', () => {
     let scrollBar = window.scrollY;
     if(headerTop < scrollBar) {
@@ -98,16 +101,22 @@ $(function () {
   });
 
     
-  //top버튼
-
-  const topBtn = document.querySelector('#top-btn'); 
+  //top버튼 //javascript 방식은 브라우저에서 설정해야 부드럽게 적용이 되므로
+  //jquery 를 이용하여 top버튼 설정이 사용자들에게 효과를 제공할 수 있음.
+  
+  /* const topBtn = document.querySelector('#top-btn'); 
   topBtn.addEventListener('click', () => {
     window.scrollTo({
       top:0,
-      left : 0,
-      behavior: "smooth",
+      behavior: 'smooth'
     })
-  });//topBtn.click()
+  });  */
+
+  $('#top-btn').click(function (event) {
+		event.preventDefault();
+		$('html, body').animate({ scrollTop: 0 }, 300);
+	});
+
 
   //캘린더
   var options = {
