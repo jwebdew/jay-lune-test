@@ -2,6 +2,26 @@ $(function () {
  /*  $("a").click(function (e) {
     e.preventDefault();
   }); */
+
+
+  let mainTabMenu = document.querySelectorAll('.main_data__menu li');
+  let tabContent = document.querySelectorAll('.main_data__list');
+
+  for(let i = 0; i <= tabContent.length; i++) {
+    mainTabMenu[i].addEventListener('click', () => {
+      mainTabMenu.forEach((item) => {
+          item.classList.remove('on')
+        })
+        mainTabMenu[i].classList.add('on');
+
+        tabContent.forEach((item) => {
+          item.classList.remove('on')
+        })
+        tabContent[i].classList.add('on');
+    });
+  }
+
+
   // 포트폴리오
   let portfolioView = $(".main_portfolio__list .item--click");
   let portfolioViewImage = portfolioView.find(".item--click__image img");
@@ -47,6 +67,11 @@ $(function () {
     portfolioView.removeClass("on");
   });
 
+
+
+
+
+
   //자주묻는질문
   let faq = document.querySelectorAll(".main_faq .list ul");
   //let faqText = document.querySelectorAll(".faq_text");
@@ -87,7 +112,7 @@ $(function () {
      logo.src = 'img/logo_vol6.svg'
     } else {
       header.classList.remove('on')
-      logo.src = 'img/logo_vol7.svg'
+      logo.src = 'img/logo_vol6_notext.svg'
 
     }
 

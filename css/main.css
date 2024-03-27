@@ -176,6 +176,10 @@
 .main_data__list {
   display: flex;
   justify-content: space-between;
+  display: none;
+}
+.main_data__list.on {
+  display: flex;
 }
 .main_data__list .item {
   width: calc(25% - 20px);
@@ -189,9 +193,6 @@
 }
 .main_data__list .item figure img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .main_data__list .item--text {
   padding: 20px 0;
