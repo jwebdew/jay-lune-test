@@ -13,6 +13,7 @@
     --color-yellow-light: rgba(242, 200, 76, 0.651);
     --color-coral: #ff856c;
     --color-lightgray: #eee;
+    --color-gray: #999;
     --font-sectionTitle: 80px;
     --font-sectionSubTitle: 20px;
     --font-contentTitle: 25px;
@@ -24,17 +25,9 @@
     --font-weightRight: 400;
 }
 
-@media screen and (max-width: 767px) {
-    :root {
-        --font-sectionTitle: 50px;
-    }
-}
-@media screen and (max-width: 480px) {
-    :root {
-        --font-sectionTitle: 25px;
-        --font-contentTitle: 20px;
-    }
-}
+
+
+
 /* 📂 publishing.html */
 body {
     background-color: var(--color-lightgray);
@@ -43,11 +36,60 @@ body {
 header {
     position: static;
 }
+.sub-search {
+    width: 500px;
+    margin: 50px 0 20px;
+    .search_box {
+        position: relative;
+        input#search {
+            width: 100%;
+            height: 60px;
+            border: 1px solid #333;
+            border-radius: 40px;
+            padding: 0 10px;
+            &::placeholder {
+                font-size: 14px;
+                color: var(--color-gray);
+            }
+        }
+        span {
+            height: calc(100% - 10px);
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            right: 7px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--color-coral);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // border: 2px solid #333;
+            img {
+                width: 25px;
+            }
+        }
+    }
 
+} /* sub-search */
 .content_menu {
     display: flex;
-    gap: 30px;
-    margin-top: 40px;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    li {
+        background-color: var(--color-white);
+        border-radius: 3px;
+        padding: 2px 4px;
+        font-size: 16px;
+        font-style: italic;
+        a {display: inline-block;}
+    }
+    li::before {
+        content: '#'; 
+    }
 }
 .design {
     margin-top: 100px;
@@ -78,11 +120,26 @@ header {
         img {
             width: 100%;
         }
+
+        h4 {display: none;}
+        p {display: none;}
     }
 }
 
 @media screen and (max-width: 1023px) {
     :root {
         --column-count: 3;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --font-sectionTitle: 50px;
+    }
+}
+@media screen and (max-width: 480px) {
+    :root {
+        --font-sectionTitle: 25px;
+        --font-contentTitle: 20px;
     }
 }

@@ -22,6 +22,7 @@ $(function () {
   }
 
 
+
   // 포트폴리오
   let portfolioView = $(".main_portfolio__list .item--click");
   let portfolioViewImage = portfolioView.find(".item--click__image img");
