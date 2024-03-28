@@ -330,13 +330,28 @@
                 bottom: 0;
                 border: 3px solid #333;
                 figure {
-                    height: 82%;
+                    // width: calc(100% - 7px);
+                    height: 80%;
                     overflow: hidden;
                     border-radius: 10px;
+                    overflow-y: scroll;
     
                     img {
                         width: 100%;
                     }
+                }
+                figure::-webkit-scrollbar {
+                    width: 7px;
+                    // display: none;
+                }
+                figure::-webkit-scrollbar-thumb {
+                    height: auto;
+                    background-color: #4169E1;
+                    border-radius: 5px;
+                }
+                figure::-webkit-scrollbar-track {
+                    background: #f2c84c; 
+                    border-radius: 5px;
                 }
                 .item__category {
                     display: flex;
@@ -348,13 +363,23 @@
                 }
                 h4 {
                     font-weight: 600;
-                    margin: 10px 0 20px;
+                    margin: 10px 0;
                     font-size: 18px;
                 }
+                
                 p {
                     font-size: 13px;
                     line-height: 1.5;
                     display: none;
+                }
+                
+                .qr {
+                    height: 60px;
+                    margin-left: auto;
+                    display: block;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 10px;
                 }
             }/* __text */
         }/* item--click  */
@@ -446,13 +471,28 @@
                             right: 20px;
                             top: 50%;
                             transform: translate(0, -50%);
-                            
-
                         }
                         &:hover::after {
                             background-image: url('../img/moreBtn_right_white.png');
                             transition: background 1s 0.5s;
                         }
+                       
+                    }
+                    .qr img {
+                        height: 100px;
+                        vertical-align: middle;
+                    }
+                    .qr::before {
+                        display: none;
+                    }
+                    .qr::after {
+                         
+                        height: 100px;
+                        width: 100px;
+                        background: url('../img/qr-f5nature.svg') center / auto 100% no-repeat;
+                    }
+                    .qr:hover {
+                        color: #333;
                     }
                 } /* item__btn */
             }

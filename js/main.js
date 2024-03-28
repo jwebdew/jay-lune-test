@@ -7,7 +7,7 @@ $(function () {
   let mainTabMenu = document.querySelectorAll('.main_data__menu li');
   let tabContent = document.querySelectorAll('.main_data__list');
 
-  for(let i = 0; i <= tabContent.length; i++) {
+  for(let i = 0; i < tabContent.length; i++) {
     mainTabMenu[i].addEventListener('click', () => {
       mainTabMenu.forEach((item) => {
           item.classList.remove('on')
@@ -39,7 +39,7 @@ $(function () {
 
   portfolioItemImage.css('opacity', '0.4')
   portfolioItemImage.eq(0).css('opacity', '1')
-  portfolioItem.mouseenter(function () {
+  portfolioItem.click(function () {
     let thisImage = $(this).find('img').attr('src');
     //console.log(thisImage.find('.item__category').text())
     let thiscategory = $(this).next().find('.item__category').text();
