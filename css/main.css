@@ -514,7 +514,7 @@
   row-gap: 20px;
   grid-row: 50px;
   grid-template-rows: max-content;
-  padding: 30px;
+  padding: 60px 30px;
 }
 .best_motion .motion_list .item a div span {
   font-size: 14px;
