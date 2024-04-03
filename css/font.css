@@ -103,7 +103,7 @@
 }
 
 @import url("https://font.elice.io/css?family=Elice+DX+Neolli");
-/* 
+
 @font-face {
   font-family: 'Elice DX Neolli';
   font-style: normal;
@@ -113,4 +113,3 @@
     url('https://cdn-front-door.elice.io/font/static/f/dxneolli/300/0.woff') format('woff');
   unicode-range: U+f9ca-fa0b, U+ff03-ff05, U+ff07, U+ff0a-ff0b, U+ff0d-ff19, U+ff1b, U+ff1d, U+ff20-ff5b, U+ff5d, U+ffe0-ffe3, U+ffe5-ffe6;
 }
- */
