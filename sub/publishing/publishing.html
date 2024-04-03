@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../css/common.css">
     <!-- <link href="css/list.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="css/publishing.css">
-    <!-- <link rel="stylesheet" href="css/publishing.scss"> -->
+    <link rel="stylesheet" href="css/publishing.scss">
 
     <script src="lib/jquery-3.7.0.min.js"></script>
     <!-- <SCript src="../../js/common.js"></SCript> -->
@@ -67,19 +67,30 @@
                     <p>퍼블리싱</p>
                 </div><!-- .sub_title end -->
 
-                <ul class="content_menu">
+               <!--  <ul class="content_menu">
                     <li><a href="#">전체</a></li>
                     <li class="on"><a href="#">html/style</a></li>
                     <li><a href="#">script</a></li>
                     <li><a href="#">example</a></li>
-                </ul><!-- content_menu -->
+                </ul> --><!-- content_menu -->
 
-                <form action="">
+                <form action="" class="sub-search">
                     <div class="search_box">
                         <input type="text" id="search" placeholder="검색어를 입력해주세요" />
                         <!-- <button>검색</button> -->
+                        <span class="search_box-btn"><img src="../design/img/icon-search.png" alt="검색"></span>
                     </div><!-- .search_box end -->
-                </form>
+                    <div class="content_menu">
+                        <!-- <li><a href="#">전체</a></li> -->
+                        <label for="search" class="on">javascript</label>
+                        <label for="search">jquery</label>
+                        <label>style</label>
+                        <label><a href="#">responsive</a></label>
+                        <label><a href="#">example</a></label>
+                        <!-- <label><a href="#">반응형</a></label> -->
+                    </div><!-- content_menu -->
+                </form><!-- sub-search -->
+
 
                 <!--  <div class="work__button">
                     <ul>

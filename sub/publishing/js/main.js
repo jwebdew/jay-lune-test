@@ -1,6 +1,7 @@
 $(function () { 
-    //onkeyup() 사용자가 키보드 눌렀다가 땠을 때
-    let searchBox = document.querySelector('#search')
+    let searchBox = document.querySelector('#search');
+    let searchBoxBtn = document.querySelector('.search_box-btn')
+
     function filter() {
         let search = document.getElementById("search").value;
         let listInner = document.getElementsByClassName("item");
@@ -18,10 +19,23 @@ $(function () {
             console.log(listInner[i])
         }
     }
+ 
+
     searchBox.onkeyup = function () {
         filter()
-
+       
     }
+
+    searchBoxBtn.onclick = function(){
+        filter() 
+    }
+   
+    let categoryItem = $('.content_menu label')
+    categoryItem.click(function(){
+        let categoryText = $(this).text();
+        $('#search').val(categoryText)
+        console.log($('#search').text())
+    })
 
     //탭메뉴 .content_menu
     const contentMenu = $('.content_menu li');

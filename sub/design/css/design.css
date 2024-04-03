@@ -34,47 +34,6 @@ header {
   position: static;
 }
 
-.sub-search {
-  width: 500px;
-  margin: 50px 0 20px;
-}
-.sub-search .search_box {
-  position: relative;
-}
-.sub-search .search_box input#search {
-  width: 100%;
-  height: 60px;
-  border: 1px solid #333;
-  border-radius: 40px;
-  padding: 0 10px;
-}
-.sub-search .search_box input#search::-moz-placeholder {
-  font-size: 14px;
-  color: var(--color-gray);
-}
-.sub-search .search_box input#search::placeholder {
-  font-size: 14px;
-  color: var(--color-gray);
-}
-.sub-search .search_box span {
-  height: calc(100% - 10px);
-  width: 50px;
-  border-radius: 50%;
-  position: absolute;
-  right: 7px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--color-coral);
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.sub-search .search_box span img {
-  width: 25px;
-}
-
-/* sub-search */
 .content_menu {
   display: flex;
   gap: 20px;
