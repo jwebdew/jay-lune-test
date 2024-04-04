@@ -301,6 +301,7 @@
 }
 
 .main_portfolio {
+     
     .sec_btn {
        
     }
@@ -308,11 +309,18 @@
         width: calc(100% - 100px);
         margin: 0 auto;
         // margin-top: 80px;
+        display: flex;
+        overflow: hidden;
+        position: relative;
     }
+   
     
     &__list_item {
+        width: 100%;
         display: flex;
         justify-content: space-between; 
+        position: relative;
+        // transition: 1s;
         .item--click { 
             position: relative;
             width: 60%;
@@ -324,8 +332,11 @@
                 border-radius: 20px;
                 overflow: hidden;
                 figure {
+                    overflow: hidden;
                     img {
                         width: 100%;
+                        transform: translateX(100%);
+                        transition: 1s;
                     }
                 }
             }/* __image */
@@ -343,9 +354,7 @@
                 right: -12%;
                 bottom: 0;
                 border: 3px solid #333;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+                
                 &-inner {
                     width: calc(100% - 100px);
                 }
@@ -358,6 +367,9 @@
     
                     img {
                         width: 100%;
+                        transform: translateX(100%);
+                        transition: 1s;
+                         
                     }
                 }
                 figure::-webkit-scrollbar {
@@ -408,6 +420,20 @@
 
     }/* main_portfolio__list_item */
 
+    .protfolio-slide_wrap {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+    }
+    &__list_item.protfolio-slides { 
+        .item--click__image img {
+            transform: translateX(0);
+        }
+        .item--click__text img {
+            transform: translateX(0);
+        }
+    }
+
     &__item_wrap {
         // width: 30%;
         width: 30%;
@@ -418,6 +444,7 @@
         .item {
             // width: calc(100% / 3 - 10px);
             width: 100%;
+            margin-bottom: 50px;
             figure {
                 max-height: 180px;
                 height: 8vw;
@@ -526,6 +553,14 @@
         }
     }/* main_portfolio__item_wrap */
    
+    .slide-btn {
+        position: absolute;
+        right: 27%;
+        bottom: 0;
+        img {
+            width: 15px;
+        }
+    }
 }/* .main_portfolio end */
 
 

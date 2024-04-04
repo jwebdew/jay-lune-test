@@ -24,6 +24,7 @@ $(function () {
 
 
   // 포트폴리오
+  let portfolioViewWrap = $('.main_portfolio__list');
   let portfolioView = $(".main_portfolio__list .item--click");
   let portfolioViewImage = portfolioView.find(".item--click__image img");
   let portfolioViewMobileImage = portfolioView.find(".item--click__text img");
@@ -31,11 +32,34 @@ $(function () {
   let portfolioViewcategory = portfolioView.find(".item__category");
   let portfolioViewText = portfolioView.find("p");
 
+  let portfolioItemWidth = $('.protfolio-slide_wrap');
+  let portfolioSlies = $('.main_portfolio__list_item');
   let portfolioItemAddClass = $('.main_portfolio__list_item .item');
   let portfolioItem = $(".main_portfolio__list_item .item .item__image_wrap");
   let portfolioItemImage = portfolioItem.find('img');
   // let portfolioItemTitle = portfolioItem.find('h4');
   // let portfolioItemText = portfolioItem.find('p');
+
+  let portfolioBtnPrev = $('#protfolio .arrow-prev');
+  let portfolioBtnNext = $('#protfolio .arrow-next');
+  let slidePage = 0;
+
+  portfolioItemWidth.css('width', portfolioViewWrap.width())
+
+  portfolioBtnNext.click(function(){
+    slidePage++;
+    console.log(slidePage)
+    console.log(portfolioViewImage.length)
+    if(portfolioSlies.length <= slidePage) {
+      slidePage = 0;
+    }
+    
+    portfolioSlies.removeClass('protfolio-slides');
+    portfolioSlies.eq(slidePage).addClass('protfolio-slides')
+    portfolioSlies.css('left', -portfolioViewWrap.width() * slidePage)
+    // $('.protfolio-slides').css('left', 0)
+   
+  })
 
   portfolioItemImage.css('opacity', '0.4')
   portfolioItemImage.eq(0).css('opacity', '1')
@@ -69,6 +93,7 @@ $(function () {
   });
 
 
+  //포트폴리오 슬라이드
 
 
 
