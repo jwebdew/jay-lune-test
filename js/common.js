@@ -1,5 +1,5 @@
 //채널톡 연결
-/* (function () {
+(function () {
   var w = window;
   if (w.ChannelIO) {
     return w.console.error("ChannelIO script included twice.");
@@ -36,7 +36,7 @@
 
 ChannelIO("boot", {
   pluginKey: "1a6d36e2-9421-497c-92d7-790776f8fa3f",
-}); */
+});
 
 $(function () {
   $(window).mousemove(function (e) {
