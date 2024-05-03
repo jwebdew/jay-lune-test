@@ -553,12 +553,44 @@
         }
     }/* main_portfolio__item_wrap */
    
-    .slide-btn {
+    .slide-btn { 
+        width: 30%;
         position: absolute;
-        right: 27%;
+        right: 0;
         bottom: 0;
         img {
-            width: 15px;
+            height: 20px;
+        }
+        button {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            cursor: pointer;
+            &.arrow-next {
+                left: 30px;  
+            }
+        }
+        .page {
+            margin-left: 20px;
+        }
+        .prograss-bar {
+            width: 90%;
+            height: 3px;
+            background-color: #ff856c3a;
+            position: absolute;
+            right: 0;
+            bottom: 7px;
+            border-radius: 10px;
+            overflow: hidden;
+            span {
+                width: calc(100%/ 3);
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #FF856C;
+                transition: 0.5s;
+            }
         }
     }
 }/* .main_portfolio end */

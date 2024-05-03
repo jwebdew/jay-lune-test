@@ -24,6 +24,8 @@ $(function () {
 
 
   // 포트폴리오
+  // let $portfolioId = $('#protfolio');
+  let $portfolioId = $('#protfolio');
   let portfolioViewWrap = $('.main_portfolio__list');
   let portfolioView = $(".main_portfolio__list .item--click");
   let portfolioViewImage = portfolioView.find(".item--click__image img");
@@ -40,11 +42,20 @@ $(function () {
   // let portfolioItemTitle = portfolioItem.find('h4');
   // let portfolioItemText = portfolioItem.find('p');
 
-  let portfolioBtnPrev = $('#protfolio .arrow-prev');
-  let portfolioBtnNext = $('#protfolio .arrow-next');
+  let portfolioBtnPrev = $portfolioId.find('.arrow-prev');
+  let portfolioBtnNext = $portfolioId.find('.arrow-next');
+  let slidePageAll = $portfolioId.find('.page_all');
+  let slidePageNum = $portfolioId.find('.page_num');
+  let prograssBar = $portfolioId.find('.prograss-bar span');
   let slidePage = 0;
 
+
+  slidePageAll.text(portfolioViewImage.length)
+
   portfolioItemWidth.css('width', portfolioViewWrap.width())
+  let $prograssBarWidth = 100 / portfolioViewImage.length
+  prograssBar.css('width', $prograssBarWidth + '%')
+
 
   portfolioBtnNext.click(function(){
     slidePage++;
@@ -53,13 +64,19 @@ $(function () {
     if(portfolioSlies.length <= slidePage) {
       slidePage = 0;
     }
-    
+    let slidePageAdd = slidePage + 1 
+    slidePageNum.text(slidePageAdd);
+    prograssBar.css('width', $prograssBarWidth * slidePageAdd + '%');
+
     portfolioSlies.removeClass('protfolio-slides');
     portfolioSlies.eq(slidePage).addClass('protfolio-slides')
     portfolioSlies.css('left', -portfolioViewWrap.width() * slidePage)
     // $('.protfolio-slides').css('left', 0)
    
-  })
+  });
+
+
+
 
   portfolioItemImage.css('opacity', '0.4')
   portfolioItemImage.eq(0).css('opacity', '1')
