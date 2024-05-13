@@ -152,7 +152,7 @@ $(function () {
     let scrollBar = window.scrollY;
     if(headerTop < scrollBar) {
       header.classList.add('on');
-     logo.src = 'img/logo_vol6.svg'
+     logo.src = 'img/logo_vol6_notext.svg'
     } else {
       header.classList.remove('on')
       logo.src = 'img/logo_vol6_notext.svg'
